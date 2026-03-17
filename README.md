@@ -16,8 +16,8 @@ The main goals of this project are:
 - compare happiness and freedom-related indicators across multiple years
 - clean and align datasets coming from different sources and structures
 - handle missing values with a more informed approach than simple global filling
-- build simple predictive models for both a categorical and a continuous target
-- prepare a clean final dataset that can be exported and used in Power BI
+- use simple machine learning models to classify and predict Happiness Score through both a categorical and a continuous target
+- prepare a clean final dataset that can be exported to Power BI, transformed in Power Query, and used to build the final data model and dashboard
 
 ## Data sources
 
@@ -70,7 +70,7 @@ The goal is to preserve more structure from the data instead of relying only on 
 
 ### 4. Final dataset preparation for Power BI
 
-After cleaning and missing value handling, the notebook creates a final table that is exported to CSV and later used in Power BI for dashboarding and visual analysis.
+After cleaning and missing value handling, the notebook creates a final table that is exported to CSV and later imported into Power BI. From there, I apply additional transformations in Power Query, build the data model with dimensions and relationships, and create the final dashboard for visual analysis.
 
 ### 5. Exploratory analysis
 
@@ -85,7 +85,7 @@ This part highlights that happiness is strongly associated not only with economi
 
 ### 6. Classification modeling
 
-For the categorical target, I compare several classification models:
+For the classification task, I transform Happiness Score into a categorical target and compare several models to predict the class of each observation:
 
 - Logistic Regression
 - KNN
@@ -102,7 +102,7 @@ KNN gives the best baseline result, with an accuracy of about **0.83**.
 
 ### 7. Regression modeling
 
-For the continuous target, I compare:
+For the regression task, I use Happiness Score as a continuous target and compare:
 
 - Linear Regression
 - Random Forest Regressor
