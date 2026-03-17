@@ -212,3 +212,7 @@ This is a portfolio version of a project originally developed during a post-seco
 ## Author
 
 **Emanuele Roccella**
+
+## Copyright
+
+Copyright © Emanuele Roccella. All rights reserved.
